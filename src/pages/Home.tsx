@@ -92,7 +92,7 @@ const Home = () => {
           <div className="my-4 border-t-2 border-white w-72 mx-auto" />
 
           <p className="font-serif text-lg sm:text-xl mt-4">
-            Saturday, December 14, 2026 | St. Peter Parish Church
+            Saturday, May 23, 2026 | St. Peter Parish Church
           </p>
         </section>
 
