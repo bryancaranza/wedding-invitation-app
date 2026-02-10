@@ -107,7 +107,7 @@ const Home = () => {
         {/* WEDDING DETAILS */}
         <section className="py-20 px-6 bg-white/80 text-black text-center">
           <h2 className="text-3xl font-serif mb-6">Wedding Details</h2>
-          <p>Saturday, December 14, 2026</p>
+          <p>Saturday, May 23, 2026</p>
           <p>2:00 PM</p>
           <p className="mt-4 font-semibold">St. Peter Parish Church</p>
           <p>Reception to follow</p>
