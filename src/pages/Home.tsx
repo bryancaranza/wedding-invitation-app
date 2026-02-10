@@ -41,8 +41,8 @@ const Home = () => {
         <ReactHowler
           src="src/assets/music/wedding-theme-song.mp3"
           playing={isPlaying}
-          loop={true}
-          volume={0.5}
+          loop
+          volume={0.2}
         />
       )}
 
@@ -71,19 +71,29 @@ const Home = () => {
       <div className="relative z-10 text-white">
         {/* HERO */}
         <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-          <p className="font-serif mb-6">
+          <p className="font-serif text-xl sm:text-2xl">
             please join us in celebrating the wedding of
           </p>
 
-          <div className="flex items-center gap-4 sm:gap-6">
-            <p className="font-scriptina text-5xl sm:text-6xl md:text-8xl">
+          <div className="my-4 border-t-2 border-white w-72 mx-auto" />
+
+          <div className="flex items-center justify-center gap-4 sm:gap-6">
+            <p className="font-scriptina text-6xl sm:text-7xl md:text-9xl">
               Jessa
             </p>
-            <p className="font-scriptina text-2xl sm:text-3xl md:text-4xl">&</p>
-            <p className="font-scriptina text-5xl sm:text-6xl md:text-8xl">
+            <p className="font-scriptina text-3xl sm:text-4xl md:text-5xl mt-6">
+              &
+            </p>
+            <p className="font-scriptina text-6xl sm:text-7xl md:text-9xl">
               Cha
             </p>
           </div>
+
+          <div className="my-4 border-t-2 border-white w-72 mx-auto" />
+
+          <p className="font-serif text-lg sm:text-xl mt-4">
+            Saturday, December 14, 2026 | St. Peter Parish Church
+          </p>
         </section>
 
         {/* MESSAGE */}
