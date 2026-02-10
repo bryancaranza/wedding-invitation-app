@@ -1,4 +1,3 @@
-import ProtectedRoute from "@/components/custom/ProtectedRoute";
 import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ROUTES } from "./routes";
@@ -9,16 +8,9 @@ const Home = lazy(() => {
     setTimeout(() => resolve(import("@/pages/Home")), 1500);
   });
 });
-
-const Dashboard = lazy(() => {
+const NotFound = lazy(() => {
   return new Promise((resolve: any) => {
-    setTimeout(() => resolve(import("@/pages/Dashboard")), 1500);
-  });
-});
-
-const Login = lazy(() => {
-  return new Promise((resolve: any) => {
-    setTimeout(() => resolve(import("@/pages/Login")), 1500);
+    setTimeout(() => resolve(import("@/pages/NotFound")), 100);
   });
 });
 
@@ -27,13 +19,7 @@ const RouteElements = () => {
     <Routes>
       {/* Public Routes */}
       <Route path={ROUTES.ROOT} element={<PublicRoute component={Home} />} />
-      <Route path={ROUTES.LOGIN} element={<PublicRoute component={Login} />} />
-
-      {/* Private Routes */}
-      <Route
-        path={ROUTES.DASHBOARD}
-        element={<ProtectedRoute component={Dashboard} />}
-      />
+      <Route path="*" element={<PublicRoute component={NotFound} />} />
     </Routes>
   );
 };

@@ -1,6 +1,18 @@
+@font-face {
+  font-family: "Scriptina";
+  src: url("/src/assets/fonts/SCRIPTIN.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@theme {
+  font-scriptina: Scriptina, "sans-serif";
+}
 
 html,
 body,
@@ -8,6 +20,7 @@ body,
   height: 100%;
   font-family: Inter var, ui-sans-serif, system-ui, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  scroll-behavior: "smooth";
 }
 
 /* @layer base {
