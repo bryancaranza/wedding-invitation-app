@@ -18,8 +18,15 @@ html,
 body,
 #root {
   height: 100%;
-  font-family: Inter var, ui-sans-serif, system-ui, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family:
+    Inter var,
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
   scroll-behavior: "smooth";
 }
 
@@ -88,3 +95,84 @@ body,
     @apply bg-background text-foreground;
   }
 } */
+@keyframes slideLeft {
+  from {
+    transform: translateX(8%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-8%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(8%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-8%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.15);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.animate-slide-left {
+  animation: slideLeft 5s ease-out forwards;
+}
+.animate-slide-right {
+  animation: slideRight 5s ease-out forwards;
+}
+.animate-slide-up {
+  animation: slideUp 5s ease-out forwards;
+}
+.animate-slide-down {
+  animation: slideDown 5s ease-out forwards;
+}
+.animate-zoom-in {
+  animation: zoomIn 5s ease-out forwards;
+}
+.animate-zoom-out {
+  animation: zoomOut 5s ease-out forwards;
+}
+
+@keyframes rollCredits {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

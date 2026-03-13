@@ -60,6 +60,9 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      height: {
+        webkit: '-webkit-fill-available'
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -69,13 +72,31 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        
+        'slide-down': {
+          '0%': { height: '0' },
+          '100%': { height: 'var(--radix-accordion-content-height)' },
+        },
+        'slide-up': {
+          '0%': { height: 'var(--radix-accordion-content-height)' },
+          '100%': { height: '0' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'slide-down': 'slide-down 300ms ease-out',
+        'slide-up': 'slide-up 300ms ease-out',
       },
       backgroundImage: {
-        "prenup-bg": "url('/src/assets/images/prenup-wallpaper.jpg')",
+        "prenup-bg": "url('/src/assets/images/prenup.jpg')",
+        "prenup-banner": "url('/src/assets/images/banner.jpg')",
+      },
+      colors: {
+        gold: {
+          200: '#FCD34D', // Tailwind default yellow-300 can act as gold
+          400: '#FBBF24',
+        },
       },
     },
   },
