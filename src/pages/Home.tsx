@@ -57,7 +57,7 @@ const Home = () => {
       {/* AUDIO */}
       {canPlay && (
         <ReactHowler
-          src="src/assets/music/wedding-theme-song.mp3"
+          src="/music/wedding-theme-song.mp3"
           playing={isPlaying}
           loop
           volume={0.2}
