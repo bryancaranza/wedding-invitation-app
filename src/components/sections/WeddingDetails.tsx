@@ -27,7 +27,7 @@ const WeddingDetails = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-white/80 text-black text-center h-screen">
+    <section className="py-20 px-6 bg-white/80 text-black text-center md:h-screen">
       <div className="w-full max-w-3xl mx-auto px-6">
         <h2 className="text-3xl font-serif mb-16">Wedding Program</h2>
 
