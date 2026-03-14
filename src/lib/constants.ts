@@ -17,6 +17,8 @@ export const timeline = [
   { time: "7:00 PM", event: "Party", image: partyImg },
 ];
 
+export const date = "2026-05-23";
+
 export const storyImages = [prenup2, prenup3, prenup];
 
 export const entourage = {

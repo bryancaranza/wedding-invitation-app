@@ -1,3 +1,6 @@
+import { date } from "@/lib/constants";
+import { formatDate } from "@/lib/utils";
+
 interface InvitationProps {
   isIntro: boolean;
   handleEnter: () => void;
@@ -21,7 +24,7 @@ const Invitation = ({ isIntro, handleEnter }: InvitationProps) => {
       </div>
 
       <p className="font-serif text-lg sm:text-xl mt-4">
-        Saturday, May 23, 2026 | St. Peter Parish Church
+        {formatDate(date, "EEEE, MMMM d, yyyy")} | St. Peter Parish Church
       </p>
 
       {/* ENTER BUTTON */}

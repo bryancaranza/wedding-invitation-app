@@ -8,6 +8,8 @@ import WeddingDetails from "@/components/sections/WeddingDetails";
 import Entourage from "@/components/sections/Entourage";
 import DressCode from "@/components/sections/DressCode";
 import FAQs from "@/components/sections/FAQs";
+import { SaveTheDate } from "@/components/custom/SaveTheDate";
+import { entourage, date } from "@/lib/constants";
 
 const Home = () => {
   const [blur, setBlur] = useState(0);
@@ -109,6 +111,12 @@ const Home = () => {
 
         {/* FAQ */}
         <FAQs />
+
+        <SaveTheDate
+          bride={entourage.bride}
+          groom={entourage.groom}
+          date={date}
+        />
 
         {/* RSVP */}
         <section className="py-20 px-6 bg-white/80 text-black text-center">
