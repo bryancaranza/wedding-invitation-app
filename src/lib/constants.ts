@@ -6,6 +6,8 @@ import receptionImg from "@/assets/images/reception.jpg";
 import dinnerImg from "@/assets/images/dinner.jpg";
 import cocktailsImg from "@/assets/images/cocktail.jpg";
 import partyImg from "@/assets/images/party.jpg";
+import psGroup from "@/assets/images/attire1.png";
+import gmGroup from "@/assets/images/attire2.png";
 
 export const timeline = [
   { time: "1:00 PM", event: "Ceremony", image: ceremonyImg },
@@ -106,5 +108,25 @@ export const faqs = [
     question: "Are children allowed at the event? 👧",
     answer:
       "In order to allow all our guests a night of relaxation, we have chosen an ADULTS-ONLY setting for our wedding. Exceptions are made only for children who are part of the wedding entourage. We appreciate your understanding and hope this allows you to enjoy the evening to the fullest!",
+  },
+];
+
+export const dressCodeGroups = [
+  {
+    role: "Principal Sponsors",
+    image: psGroup,
+    male: "Gents: Barong & Black Pants",
+    female: "Ladies: Modern Filipiniana",
+  },
+  {
+    role: "Groomsmen & Bridesmaid",
+    image: gmGroup,
+    male: "Black Suit & Slacks",
+    female: "Olive Green Silk Long Gown",
+  },
+  {
+    role: "Guests",
+    image: null,
+    both: "Formal Attirre within dresscode ",
   },
 ];

@@ -48,10 +48,10 @@ const OurStory = () => {
       {/* SCROLLABLE TEXT */}
       <div
         ref={textRef}
-        className="relative z-10 h-full max-w-3xl mx-auto px-6 py-10 flex flex-col space-y-6 overflow-y-auto text-white font-serif text-lg"
+        className="relative z-10 h-full max-w-3xl mx-auto px-6 py-10 flex flex-col justify-center space-y-6 overflow-y-auto text-white font-serif text-lg"
       >
         <h2 className="text-4xl text-center mb-6">Our Story</h2>
-        <p className="text-sm">
+        <p className="text-sm leading-loose">
           From a chance meeting, something unexpected quietly blossomed between
           us. What began over a simple coffee, accompanied by shared
           conversation and quiet moments, grew into a friendship filled with
@@ -59,14 +59,12 @@ const OurStory = () => {
           deepened, teaching us the true meaning of choosing one another
           <br /> day after day, in every way.
         </p>
-        <p className="text-sm">
+        <p className="text-sm leading-loose">
           As we embark on this next chapter of our lives, we do so with grateful
           hearts and unwavering faith in the journey ahead. Surrounded by the
           love of our family and friends, we joyfully invite you to witness and
-          celebrate the day we vow forever to each other <br />
-          <br />a day where our story continues <br />
-          <br /> hand in hand <br />
-          <br /> as we unite in marriage.
+          celebrate the day we vow forever to each other, a day where our story
+          continues, hand in hand, as we unite in marriage.
         </p>
       </div>
     </section>

@@ -117,7 +117,7 @@ const Home = () => {
           <div className="max-w-3xl mx-auto">
             <iframe
               className="w-full h-[900px] rounded-lg"
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfLHQxM4V7pCaMLODtwGB6QBzI_VR85QgQfKcbLgrh1PDV-og/viewform?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdkTRNQRuP-ZfCjk6y7xHbkbYNPBqTaZQVX6s6_epZgMomZhw/viewform?embedded=true"
               title="RSVP Form"
             />
           </div>
