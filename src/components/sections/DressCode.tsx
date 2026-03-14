@@ -45,11 +45,11 @@ const DressCode = () => {
             ) : (
               <div className="flex flex-col md:flex-row justify-center gap-6 text-sm">
                 <div>
-                  <p className="font-semibold">Male:</p>
+                  <p className="font-semibold">Gents:</p>
                   <p>{group.male}</p>
                 </div>
                 <div>
-                  <p className="font-semibold">Female:</p>
+                  <p className="font-semibold">Ladies:</p>
                   <p>{group.female}</p>
                 </div>
               </div>

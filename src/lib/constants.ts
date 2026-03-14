@@ -115,8 +115,8 @@ export const dressCodeGroups = [
   {
     role: "Principal Sponsors",
     image: psGroup,
-    male: "Gents: Barong & Black Pants",
-    female: "Ladies: Modern Filipiniana",
+    male: "Barong & Black Pants",
+    female: "Modern Filipiniana",
   },
   {
     role: "Groomsmen & Bridesmaid",
