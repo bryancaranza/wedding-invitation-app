@@ -42,7 +42,7 @@ const Entourage = () => {
 
           {/* Principal Sponsors */}
           <div className="max-w-4xl mx-auto mb-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="max-w-3xl">
+            {/* <div className="max-w-3xl">
               <h3 className="col-span-2 font-semibold mb-4">
                 Principal Sponsors
               </h3>
@@ -56,10 +56,10 @@ const Entourage = () => {
                   </React.Fragment>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Secondary Sponsors */}
-            <div>
+            {/* <div>
               <h3 className="font-semibold mb-4">Secondary Sponsors</h3>
               {entourage.secondarySponsors.map((pair, i) => (
                 <div key={i} className="mb-2 pb-4">
@@ -72,11 +72,11 @@ const Entourage = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Bestman / Maid of Honor */}
-          <div className="max-w-4xl mx-auto mb-12 grid grid-cols-2 gap-4">
+          {/* <div className="max-w-4xl mx-auto mb-12 grid grid-cols-2 gap-4">
             <h3 className="col-span-2 font-semibold mb-4">
               Bestman / Maid of Honor
             </h3>
@@ -86,10 +86,10 @@ const Entourage = () => {
                 <p className="text-sm text-left">{titleCase(pair.female)}</p>
               </React.Fragment>
             ))}
-          </div>
+          </div> */}
 
           {/* Groomsmen / Bridesmaids */}
-          <div className="max-w-4xl mx-auto mb-12 grid grid-cols-2 gap-4">
+          {/* <div className="max-w-4xl mx-auto mb-12 grid grid-cols-2 gap-4">
             <h3 className="col-span-2 font-semibold mb-4">
               Groomsmen / Bridesmaids
             </h3>
@@ -99,17 +99,17 @@ const Entourage = () => {
                 <p className="text-sm text-left">{titleCase(pair.female)}</p>
               </React.Fragment>
             ))}
-          </div>
+          </div> */}
 
           {/* Bearers */}
-          <div className="max-w-4xl mx-auto text-center">
+          {/* <div className="max-w-4xl mx-auto text-center">
             <h3 className="font-semibold mb-4">Bearers</h3>
             {entourage.bearers.map((pair, i) => (
               <p key={i} className="text-sm pb-4">
                 {pair.role ? `${pair.role}: ` : ""} {titleCase(pair.name)}
               </p>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
