@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "@/assets/images/banner.jpg";
 import Logo from "@/assets/images/logo-plain.png"; // Use a separate logo if needed
 import { entourage } from "@/lib/constants";
