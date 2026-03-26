@@ -7,7 +7,7 @@ import dinnerImg from "@/assets/images/dinner.jpg";
 import cocktailsImg from "@/assets/images/cocktail.jpg";
 import partyImg from "@/assets/images/party.jpg";
 import psGroup from "@/assets/images/principal-attire.png";
-import gmGroup from "@/assets/images/secondary-attire.png";
+import gmGroup from "@/assets/images/secondary-attire2.png";
 import bmMoh from "@/assets/images/bestman-mod.png";
 import bearersAttire from "@/assets/images/bearers-attire.png";
 import guestsAttire from "@/assets/images/guest-attires.png";
