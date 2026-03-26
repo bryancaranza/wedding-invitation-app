@@ -5,12 +5,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const loaderTimer = async (path: string, timer?: number) => {
-  return new Promise((resolve: any) => {
-    setTimeout(() => resolve(import(`${path}`)), timer || 1000);
-  });
-};
-
 export const createGoogleCalendarLink = () => {
   const title = encodeURIComponent("Jessa & Charlie's Wedding");
   const details = encodeURIComponent("Join us to celebrate our wedding!");

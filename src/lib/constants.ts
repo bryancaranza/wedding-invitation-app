@@ -6,8 +6,11 @@ import receptionImg from "@/assets/images/reception.jpg";
 import dinnerImg from "@/assets/images/dinner.jpg";
 import cocktailsImg from "@/assets/images/cocktail.jpg";
 import partyImg from "@/assets/images/party.jpg";
-import psGroup from "@/assets/images/attire1.png";
-import gmGroup from "@/assets/images/attire2.png";
+import psGroup from "@/assets/images/principal-attire.png";
+import gmGroup from "@/assets/images/secondary-attire.png";
+import bmMoh from "@/assets/images/bestman-mod.png";
+import bearersAttire from "@/assets/images/bearers-attire.png";
+import guestsAttire from "@/assets/images/guest-attires.png";
 
 export const timeline = [
   { time: "1:00 PM", event: "Ceremony", image: ceremonyImg },
@@ -42,9 +45,10 @@ export const entourage = {
     { male: "Dr. ALCANTARA, BRICCIO", female: "Ms. BUSTENERA, JENNILYN" },
     { male: "Mr. PEÑA, CHRISTOPHER", female: "Ms. SAN ADRES, NIÑA" },
     { male: "Mr. DAUAG, DEREK", female: "Ms. DAUAG, CENIZA" },
-    { male: "Mr. GARCIA, NELSON", female: "Ms. ALMENDRAL, RIZA" },
-    { male: "Mr. DAUAG, RANDY", female: "Ms. MALATE, CHERRYL" },
-    { male: "Mr. CARANZA, PIO", female: "Ms. MARASIGAN, ABLYN" },
+    { male: "Mr. GARCIA, NELSON", female: "Ms. CAPIZ, ELSIE" },
+    { male: "Mr. CARANZA, PIO", female: "Ms. MALATE, CHERRYL" },
+    { male: "", female: "Ms. MARASIGAN, ABLYN" },
+    { male: "", female: "Ms. ALMENDRAL, RIZA" },
   ],
   secondarySponsors: [
     {
@@ -53,9 +57,9 @@ export const entourage = {
       female: "Mr. RACHACHOT, DAYE",
     },
     {
-      role: "Veil 2 Girls",
-      male: "Ms. DAUAG, CHARLENE",
-      female: "Mr. CARANZA, MAY ANN",
+      role: "Veils",
+      male: "Mr. ABAD, JERSON",
+      female: "Ms. DAUAG, CHARLENE ",
     },
     {
       role: "Cord Pair",
@@ -65,25 +69,54 @@ export const entourage = {
   ],
   bestmanMaid: [{ male: "Mr. CARANZA, BRYAN", female: "Ms. CARANZA, MAY ANN" }],
   groomsmenBridesmaids: [
-    { male: "Mr. EUGENIO, KARL", female: "Ms. CARANZA, MARY JOYCE" },
-    { male: "Mr. FRIANEZA, EDGIE MAR", female: "Ms. RACHACHOT, DAYE" },
-    { male: "Mr. CARILLO, MARC WINDEN", female: "Ms. BARRAMEDA, MERICEL" },
-    { male: "Mr. PABIA, ALJUN E.", female: "Ms. DE LEOZ, RAYA ISABEL" },
     { male: "Mr. ABAD, JERSON", female: "Ms. DAUAG, CHARLENE" },
-    { male: "Mr. DAUAG, CHRISTIAN", female: "Ms. RACELIS, MARY GRACE" },
-    { male: "Mr. TUMINEZ, CLARENCE", female: "Ms. ALALID, CHARLENE" },
+    { male: "Mr. CARANZA, REYMARK", female: "Ms. CARANZA, MARY JOYCE" },
+    { male: "Mr. CARILLO, MARC WINDEN", female: "Ms.BARRAMEDA, MERICEL" },
     { male: "Mr. CASTILLO, REYMART", female: "Ms. CASTILLO, SOPHIA" },
-    { male: "Mr. CARANZA, REYMARK", female: "Ms. BIANDO, MARY GRACE" },
+    { male: "Mr. DAUAG, CHRISTIAN", female: "Ms. RACELIS, MARY GRACE" },
+    { male: "Mr. EUGENIO, KARL", female: "Ms. PUSO, MARIBEL" },
+    { male: "Mr. FRIANEZA, EDGIE MAR", female: "Ms. RACHACHOT, DAYE" },
+    { male: "Mr. PABIA, ALJUN E.", female: "Ms.VILLAFUERTE, LANYLYN" },
+    { male: "Mr. TUMINEZ, CLARENCE", female: "Ms. ALALID, CHARLENE" },
   ],
-  bearers: [
-    { role: "Ring (Boy)", name: "Mr. DAUAG, MICO ZYRUS" },
-    { role: "Coin (Boy)", name: "Mr. DAUAG, GABRIEL" },
-    { role: "Banner", name: "Mr. Caranza, Lawrence" },
-    { role: "Banner", name: "Mr. Caranza, Bjay Clarence" },
-    { role: "Flower Girls", name: "Ms. DAUAG, JAZZ CAIRENE" },
-    { role: "Flower Girls", name: "Ms. AICELLE" },
+  ringBearer: 'Mr. DAUAG, MICO ZYRUS',
+  coinBearer: 'Mr. Puso, Chris Matthews',
+  bible: [
+    {
+      name: 'Mr. Puso, Chris Matthews'
+    },
+    {
+      name: 'Ms. Bacsain, Mary Lauren'
+    },
   ],
+  banners: [
+    {
+      name: 'Mr. Caranza, Laurenz'
+    },
+    {
+      name: 'Mr. Caranza, Bjay Clarence'
+    }
+  ],
+  flowers: [
+  {
+    male: 'MR. BIAG, LHANZ',
+    female: 'Ms. Placa, Aizel'
+  },
+  {
+    male: 'Mr. Villafuerte, Khyler B.',
+    female: 'Ms. DAUAG, JAZZ CAIRENE '
+  },
+  {
+    male: 'Mr. Cortez, Gavin',
+    female: 'Ms. Dauag, Bianca Ceniza'
+  },
+  {
+    male: 'Mr. Sulayao, Richard Jr',
+    female: 'Ms. Sumpay, Janine'
+  },
+]
 };
+
 
 export const faqs = [
   {
@@ -117,18 +150,32 @@ export const dressCodeGroups = [
   {
     role: "Principal Sponsors",
     image: psGroup,
-    male: "Barong & Black Pants",
+    male: "Barong & Black Pants ",
+    female: "Modern Filipiniana",
+    extraNotes: "The Barong and Filipiniana may be worn in their traditional colors or in accordance with the touch of wedding dress code."
+  },
+  {
+    role: "Bestman & Maid of honor",
+    image: bmMoh,
+    male: "Black suit, Necktie & Slacks",
     female: "Modern Filipiniana",
   },
   {
     role: "Groomsmen & Bridesmaid",
     image: gmGroup,
-    male: "Black Suit & Slacks",
+    male: "Black suit, Bowtie & Slacks",
     female: "Olive Green Silk Long Gown",
   },
   {
+    role: "Bearers",
+    image: bearersAttire,
+    male: "Black suit, Bowtie & Slacks",
+    female: "Burnt Orange Long Gown",
+    maxWidth: 18
+  },
+  {
     role: "Guests",
-    image: null,
+    image: guestsAttire,
     both: "Formal Attirre within dresscode ",
   },
 ];
