@@ -9,10 +9,36 @@ const animations = [
   "animate-zoom-out",
 ];
 
+const useInView = (threshold = 0.3) => {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold }
+    );
+
+    const el = ref.current;
+    if (el) observer.observe(el);
+
+    return () => {
+      if (el) observer.unobserve(el);
+    };
+  }, [threshold]);
+
+  return { ref, isVisible };
+};
+
 const OurStory = () => {
   const [index, setIndex] = useState(0);
   const [animation, setAnimation] = useState(animations[0]);
   const textRef = useRef<HTMLDivElement>(null);
+
+  const { ref, isVisible } = useInView();
+  
 
   // Background slideshow
   useEffect(() => {
@@ -24,7 +50,10 @@ const OurStory = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section
+      ref={ref}
+      className="relative w-full h-screen overflow-hidden"
+    >
       {/* BACKGROUND SLIDESHOW */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         {storyImages.map((img, i) => (
@@ -50,8 +79,19 @@ const OurStory = () => {
         ref={textRef}
         className="relative z-10 h-full max-w-3xl mx-auto px-6 py-10 flex flex-col justify-center space-y-6 overflow-y-auto text-white font-serif text-lg"
       >
-        <h2 className="text-4xl text-center mb-6">Our Story</h2>
-        <p className="text-sm leading-loose">
+        <h2 className={`text-4xl text-center mb-6  ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+          style={{ transitionDelay: "200ms" }}
+        >
+          Our Story
+        </h2>
+        <p
+          className={`text-sm leading-loose transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+          style={{ transitionDelay: "500ms" }}
+        >
           From a chance meeting, something unexpected quietly blossomed between
           us. What began over a simple coffee, accompanied by shared
           conversation and quiet moments, grew into a friendship filled with
@@ -59,7 +99,12 @@ const OurStory = () => {
           deepened, teaching us the true meaning of choosing one another
           <br /> day after day, in every way.
         </p>
-        <p className="text-sm leading-loose">
+        <p
+          className={`text-sm leading-loose transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+          style={{ transitionDelay: "800ms" }}
+        >
           As we embark on this next chapter of our lives, we do so with grateful
           hearts and unwavering faith in the journey ahead. Surrounded by the
           love of our family and friends, we joyfully invite you to witness and

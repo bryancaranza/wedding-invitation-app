@@ -1,6 +1,6 @@
 const Location = () => {
   return (
-    <section className="py-20 px-6 bg-black/40 backdrop-blur-md text-center">
+    <section className="py-20 px-6 bg-black/50 backdrop-blur-md text-center">
       <div className="max-w-3xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 justify-center items-start">
         {/* CHURCH */}
         <div className="w-full h-webkit lg:w-1/2 flex flex-col justify-between gap-4">

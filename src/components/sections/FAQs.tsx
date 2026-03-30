@@ -10,7 +10,7 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 const FAQs = () => {
   return (
-    <section className="py-20 px-6 bg-white/80 text-black text-center">
+    <section className="py-20 px-6 bg-white/50 text-black text-center">
       <h2 className="text-3xl font-serif mb-6">FAQs</h2>
 
       <Accordion type="single" collapsible className="w-full max-w-2xl mx-auto">

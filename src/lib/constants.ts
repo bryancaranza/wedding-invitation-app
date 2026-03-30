@@ -80,7 +80,7 @@ export const entourage = {
     { male: "Mr. TUMINEZ, CLARENCE", female: "Ms. ALALID, CHARLENE" },
   ],
   ringBearer: 'Mr. DAUAG, MICO ZYRUS',
-  coinBearer: 'Mr. Puso, Chris Matthews',
+  coinBearer: 'Mr. DAUAG, GABRIEL',
   bible: [
     {
       name: 'Mr. Puso, Chris Matthews'
@@ -164,7 +164,7 @@ export const dressCodeGroups = [
     role: "Groomsmen & Bridesmaid",
     image: gmGroup,
     male: "Black suit, Bowtie & Slacks",
-    female: "Olive Green Silk Long Gown",
+    female: "Olive Green Long Gown",
   },
   {
     role: "Bearers",

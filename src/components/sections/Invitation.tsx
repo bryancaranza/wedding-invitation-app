@@ -23,8 +23,8 @@ const Invitation = ({ isIntro, handleEnter }: InvitationProps) => {
         </p>
       </div>
 
-      <p className="font-serif text-lg sm:text-xl mt-4">
-        {formatDate(date, "EEEE, MMMM d, yyyy")} | St. Peter Parish Church
+      <p className="font-serif text-lg sm:text-xl mt-6">
+        {formatDate(date, "EEEE, MMMM d, yyyy")} <br /> St. Peter Parish Church
       </p>
 
       {/* ENTER BUTTON */}

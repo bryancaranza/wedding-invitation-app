@@ -29,7 +29,7 @@ const WeddingDetails = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-white/80 text-black text-center">
+    <section className="py-20 px-6 bg-white/50 text-black text-center">
       <div className="w-full max-w-3xl mx-auto px-6 flex flex-col gap-12">
         <h2 className="text-3xl font-serif">Wedding Program</h2>
         <Countdown targetDate={String(new Date(date))} />
