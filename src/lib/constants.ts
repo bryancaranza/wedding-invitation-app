@@ -158,7 +158,7 @@ export const dressCodeGroups = [
     role: "Bestman & Maid of honor",
     image: bmMoh,
     male: "Black suit, Necktie & Slacks",
-    female: "Modern Filipiniana",
+    female: "Sage Green",
   },
   {
     role: "Groomsmen & Bridesmaid",
