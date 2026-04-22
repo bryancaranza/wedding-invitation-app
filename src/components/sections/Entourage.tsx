@@ -122,7 +122,7 @@ const SingleName: React.FC<{ name: string }> = ({ name }) => (
 );
 
 const ColumnDiv: React.FC<{ children: any }> = ({ children }) => (
-  <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] max-w-6xl mx-auto gap-8">{children}</div>
+  <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] max-w-6xl mx-auto max-w-md:gap-8">{children}</div>
 );
 const Entourage = () => {
   return (
@@ -192,6 +192,7 @@ const Entourage = () => {
         </Section>
         
         <Section title="Secondary Sponsors">
+          <br />
           <ColumnDiv>
             {entourage.secondarySponsors.map((item) => (
               <Section title={item.role} isSecondary>
