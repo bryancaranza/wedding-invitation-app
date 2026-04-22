@@ -209,7 +209,7 @@ const Entourage = () => {
             <NameList data={entourage.banners} />
           </Section>
         </div>
-        <Section title="Flowers">
+        <Section title="Escorts & Flowers">
           <PairList data={entourage.flowers} />
         </Section>
         
