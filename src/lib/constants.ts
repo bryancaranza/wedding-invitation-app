@@ -42,7 +42,7 @@ export const entourage = {
     { male: "Mr. BANCOD, CLARENCE", female: "Ms. MARIANO, LUNINGNING" },
     { male: "Dr. ONGSIAKO, RAMON MARIO", female: "Ms. TUAZON, MAYBOURNE STAR" },
     { male: "Mr. PEÑOLIO, FRANCISCO", female: "Ms. PENOLIO, PURITA" },
-    { male: "Dr. ALCANTARA, BRICCIO", female: "Ms. BUSTINERA, JENNILYN" },
+    { male: "Dr. ALCANTARA, BRICCIO", female: "Ms. BUSTINERA, JENNI LYN" },
     { male: "Mr. PEÑA, CHRISTOPHER", female: "Ms. SAN ADRES, NIÑA" },
     { male: "Mr. DAUAG, DEREK", female: "Ms. DAUAG, CENIZA" },
     { male: "Mr. GARCIA, NELSON", female: "Ms. CAPIZ, ELSIE" },
