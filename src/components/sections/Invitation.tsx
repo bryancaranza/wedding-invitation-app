@@ -10,7 +10,7 @@ const Invitation = ({ isIntro, handleEnter }: InvitationProps) => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative">
       <p className="font-serif text-xl sm:text-2xl">
-        please join us in celebrating the wedding of
+        Please join us in celebrating the wedding of
       </p>
 
       <div className="flex items-center justify-center gap-4 sm:gap-6 py-4">

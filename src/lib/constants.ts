@@ -1,6 +1,6 @@
 import prenup2 from "@/assets/images/prenup2.jpg";
 import prenup3 from "@/assets/images/prenup3.jpg";
-import prenup from "@/assets/images/prenup.jpg";
+import prenup from "@/assets/images/prenup.webp";
 import ceremonyImg from "@/assets/images/stpeter.jpg";
 import receptionImg from "@/assets/images/reception.jpg";
 import dinnerImg from "@/assets/images/dinner.jpg";
@@ -25,8 +25,8 @@ export const date = "2026-05-23";
 export const storyImages = [prenup2, prenup3, prenup];
 
 export const entourage = {
-  bride: "CARANZA, JESSABELLE, B",
-  groom: "DAUAG, CHARLIE JR., F",
+  bride: "Ms. CARANZA, JESSABELLE, B.",
+  groom: "Mr. DAUAG, CHARLIE JR., F.",
   parents: {
     bride: [
       { role: "Father", name: "Mr. CARANZA, FRANKIE V." },
@@ -54,7 +54,7 @@ export const entourage = {
     {
       role: "Candle Pair",
       male: "Mr. FRIANEZA, EDGIE MAR",
-      female: "Mr. RACHACHOT, DAYE",
+      female: "Ms. RACHACHOT, DAYE",
     },
     {
       role: "Veils",
@@ -64,8 +64,23 @@ export const entourage = {
     {
       role: "Cord Pair",
       male: "Mr. CASTILLO, REYMART",
-      female: "Mr. CASTILLO, SOPHIA",
+      female: "Ms. CASTILLO, SOPHIA",
     },
+    {
+      role: "Ring Bearer",
+      male: "Mr. DAUAG, MICO ZYRUS",
+      female: "",
+    },
+    {
+      role: "Coin Bearer",
+      male: "Mr. DAUAG, GABRIEL",
+      female: "",
+    },
+    {
+      role: "Bible",
+      male: "Mr. Puso, Chris Matthews",
+      female: "Ms. Bacsain, Mary Lauren",
+    }
   ],
   bestmanMaid: [{ male: "Mr. CARANZA, BRYAN", female: "Ms. CARANZA, MAY ANN" }],
   groomsmenBridesmaids: [
@@ -78,16 +93,6 @@ export const entourage = {
     { male: "Mr. FRIANEZA, EDGIE MAR", female: "Ms. RACHACHOT, DAYE" },
     { male: "Mr. PABIA, ALJUN E.", female: "Ms.VILLAFUERTE, LANYLYN" },
     { male: "Mr. TUMINEZ, CLARENCE", female: "Ms. ALALID, CHARLENE" },
-  ],
-  ringBearer: 'Mr. DAUAG, MICO ZYRUS',
-  coinBearer: 'Mr. DAUAG, GABRIEL',
-  bible: [
-    {
-      name: 'Mr. Puso, Chris Matthews'
-    },
-    {
-      name: 'Ms. Bacsain, Mary Lauren'
-    },
   ],
   banners: [
     {

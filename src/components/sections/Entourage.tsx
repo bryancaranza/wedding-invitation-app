@@ -36,7 +36,7 @@ const FadeText: React.FC<{ children: React.ReactNode; delay?: number }> = ({
   delay = 0,
 }) => (
   <p
-    className="font-serif tracking-wide opacity-0 translate-y-3 animate-fadeInUp"
+    className="tracking-wide opacity-0 translate-y-3 animate-fadeInUp font-sanserif font-semibold"
     style={{ animationDelay: `${delay}ms`, animationFillMode: "forwards" }}
   >
     {children}
@@ -44,29 +44,28 @@ const FadeText: React.FC<{ children: React.ReactNode; delay?: number }> = ({
 );
 
 // Section
-const Section: React.FC<{ title?: string; children: React.ReactNode }> = ({
+const Section: React.FC<{ title?: string; children: React.ReactNode; isSecondary?: boolean }> = ({
   title,
   children,
+  isSecondary = false
 }) => {
   const { ref, visible } = useFadeIn();
 
   return (
     <div
       ref={ref}
-      className={`max-w-xl mx-auto mb-12 text-center transition-all duration-700 ${
+      className={`max-w-4xl mx-auto mb-10 text-center transition-all duration-700 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
     >
       {title && (
-        <h3 className="text-xl font-serif tracking-wide mb-4 text-neutral-800">
+        <h3 className={` ${isSecondary ? 'font-semibold text-xl' : 'font-extrabold text-2xl'} font-serif tracking-wide mb-4 text-neutral-800`}>
           {title}
         </h3>
       )}
 
-      {children}
-
-      <div className="mt-8 flex justify-center">
-        <div className="w-24 h-[1px] bg-neutral-400/40" />
+      <div className="font-scriptina">
+        {children}
       </div>
     </div>
   );
@@ -74,7 +73,7 @@ const Section: React.FC<{ title?: string; children: React.ReactNode }> = ({
 
 // Pair List (2 columns + animated)
 const PairList: React.FC<{ data: Person[] }> = ({ data }) => (
-  <div className="grid grid-cols-2 gap-x-6 gap-y-2 max-w-lg mx-auto">
+  <div className="grid grid-cols-2 gap-x-6 gap-y-2 max-w-xl mx-auto">
     {data.map((pair, i) => {
       const isSolo = !pair.male || !pair.female;
 
@@ -122,6 +121,9 @@ const SingleName: React.FC<{ name: string }> = ({ name }) => (
   <FadeText>{titleCase(name)}</FadeText>
 );
 
+const ColumnDiv: React.FC<{ children: any }> = ({ children }) => (
+  <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] max-w-6xl mx-auto gap-8">{children}</div>
+);
 const Entourage = () => {
   return (
     <section className="relative w-full text-neutral-800 bg-white/50 text-center overflow-hidden">
@@ -139,79 +141,77 @@ const Entourage = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 pt-52 pb-16 px-6">
+      <div className="relative z-10 pt-60 pb-16 px-6">
         <img
           src={Logo}
           alt="Logo"
-          className="mx-auto w-56 h-auto mb-6 opacity-90"
+          className="mx-auto w-96 h-auto mb-6 opacity-90"
         />
 
-        <h2 className="text-4xl font-serif tracking-widest mb-12">
+        <h2 className="text-4xl font-extrabold font-serif tracking-widest mb-12">
           Entourage
         </h2>
 
         {/* ORDER */}
 
-        <Section title="Best Man">
-          <PairList data={entourage.bestmanMaid.map(p => ({ male: p.male }))} />
-        </Section>
+        <ColumnDiv>
+          <Section title="Groom">
+            <SingleName name={entourage.groom} />
+          </Section>
 
-        <Section title="Parents of the Groom">
-          <NameList data={entourage.parents.groom} />
-        </Section>
+          <Section title="Bride">
+            <SingleName name={entourage.bride} />
+          </Section>
+        </ColumnDiv>
+        
+        <ColumnDiv>
+          <Section title="Parents of the Groom">
+            <NameList data={entourage.parents.groom} />
+          </Section>
 
-        <Section title="Groom">
-          <SingleName name={entourage.groom} />
-        </Section>
+          <Section title="Parents of the Bride">
+            <NameList data={entourage.parents.bride} />
+          </Section>
+        </ColumnDiv>
 
         <Section title="Principal Sponsors">
           <PairList data={entourage.principalSponsors} />
         </Section>
 
-        <Section title="Secondary Sponsors">
-          {entourage.secondarySponsors.map((item, i) => (
-            <div key={i} className="mb-4">
-              <p className="text-sm font-semibold mb-1">{item.role}</p>
-              <PairList data={[item]} />
-            </div>
-          ))}
-        </Section>
+        <ColumnDiv>
+          <Section title="Best Man">
+            <PairList data={entourage.bestmanMaid.map(p => ({ male: p.male }))} />
+          </Section>
+          <Section title="Maid of Honor">
+            <PairList data={entourage.bestmanMaid.map(p => ({ female: p.female }))} />
+          </Section>
+        </ColumnDiv>
 
         <Section title="Groomsmen & Bridesmaids">
           <PairList data={entourage.groomsmenBridesmaids} />
         </Section>
-
-        <Section title="Ring Bearer">
-          <SingleName name={entourage.ringBearer} />
+        
+        <Section title="Secondary Sponsors">
+          <ColumnDiv>
+            {entourage.secondarySponsors.map((item) => (
+              <Section title={item.role} isSecondary>
+                <PairList data={[item]} />
+              </Section>
+            ))}
+          </ColumnDiv>
+          <br />
         </Section>
 
-        <Section title="Coin Bearer">
-          <SingleName name={entourage.coinBearer} />
-        </Section>
 
-        <Section title="Bible">
-          <NameList data={entourage.bible} />
-        </Section>
-
-        <Section title="Banners">
-          <NameList data={entourage.banners} />
-        </Section>
-
+        <div className="-mt-10">
+          <Section title="Banners">
+            <NameList data={entourage.banners} />
+          </Section>
+        </div>
         <Section title="Flowers">
           <PairList data={entourage.flowers} />
         </Section>
-
-        <Section title="Maid of Honor">
-          <PairList data={entourage.bestmanMaid.map(p => ({ female: p.female }))} />
-        </Section>
-
-        <Section title="Parents of the Bride">
-          <NameList data={entourage.parents.bride} />
-        </Section>
-
-        <Section title="Bride">
-          <SingleName name={entourage.bride} />
-        </Section>
+        
       </div>
 
       {/* ✨ Animation Keyframes */}

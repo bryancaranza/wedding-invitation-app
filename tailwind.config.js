@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       fontFamily: {
         scriptina: ["Scriptina", "cursive"],
+        sanserif: ["ui-sans-serif", "system-ui"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -89,7 +90,7 @@ module.exports = {
         'slide-up': 'slide-up 300ms ease-out',
       },
       backgroundImage: {
-        "prenup-bg": "url('/src/assets/images/prenup.jpg')",
+        "prenup-bg": "url('/src/assets/images/prenup.webp')",
         "prenup-banner": "url('/src/assets/images/banner.jpg')",
       },
       colors: {

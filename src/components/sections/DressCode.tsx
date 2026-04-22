@@ -143,7 +143,7 @@ const DressCode = () => {
           <img
             src={paletteImg}
             alt="Color Palette"
-            className="mx-auto w-full max-w-[18rem] rounded-lg object-cover opacity-90"
+            className="mx-auto w-full max-w-[13rem] rounded-lg object-cover opacity-90"
           />
         </div>
       </FadeIn>
