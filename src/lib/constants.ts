@@ -89,10 +89,10 @@ export const entourage = {
     { male: "Mr. CARILLO, MARC WINDEN", female: "Ms.BARRAMEDA, MERICEL" },
     { male: "Mr. CASTILLO, REYMART", female: "Ms. CASTILLO, SOPHIA" },
     { male: "Mr. DAUAG, CHRISTIAN", female: "Ms. RACELIS, MARY GRACE" },
-    { male: "Mr. EUGENIO, KARL", female: "Ms. Maribel Bacsain Puso" },
+    { male: "Mr. EUGENIO, KARL", female: "Ms. ALALID, CHARLENE" },
     { male: "Mr. FRIANEZA, EDGIE MAR", female: "Ms. RACHACHOT, DAYE" },
     { male: "Mr. PABIA, ALJUN E.", female: "Ms.VILLAFUERTE, LANYLYN" },
-    { male: "Mr. TUMINEZ, CLARENCE", female: "Ms. ALALID, CHARLENE" },
+    { male: "Mr. TUMINEZ, CLARENCE", female: "Ms. Arcenal, Abegail" },
   ],
   banners: [
     {
